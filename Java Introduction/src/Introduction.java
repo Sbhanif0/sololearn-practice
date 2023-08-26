@@ -190,8 +190,57 @@ public class Introduction {
         if (seats[row][column] == 0) {
             System.out.println("Seat is Free");
         } else {
-            System.out.println("Seat is Sold");
+            System.out.println("Seat is Sold"+"\n");
         }
+
+
+            // My Videos
+            String[] myVideoString = new String[10];
+            myVideoString[0] = "1 Video Title";
+            myVideoString[1] = "2 Video Title";
+            myVideoString[2] = "3 Video Title";
+            myVideoString[3] = "4 Video Title";
+            myVideoString[4] = "5 Video Title";
+            myVideoString[5] = "6 Video Title";
+            myVideoString[6] = "7 Video Title";
+            myVideoString[7] = "8 Video Title";
+            myVideoString[8] = "9 Video Title";
+            myVideoString[9] = "10 Video Title";
+            // Looping Over Array
+            for (int x = 0; x < myVideoString.length; x += 1) {
+                System.out.println(myVideoString[x]);
+            }
+            System.out.println(); // For Space
+    
+            // Public Videos
+            String[] pVideoStrings = new String[10];
+            pVideoStrings[0] = "Monir Hosen";
+            pVideoStrings[1] = "Saiful Islam";
+            pVideoStrings[2] = "Kabir Hosen";
+            pVideoStrings[3] = "Dibol Hosen";
+            pVideoStrings[4] = "Amir Hosen";
+            pVideoStrings[5] = "kadir Hosen";
+            pVideoStrings[6] = "Anar Hosen";
+            pVideoStrings[7] = "jakir Hosen";
+            pVideoStrings[8] = "rakib Hosen";
+            pVideoStrings[9] = "Ali Hosen";
+    
+            for (int i = 0; i < pVideoStrings.length; i++) { // Fetch all videos
+                System.out.println(pVideoStrings[i]);
+    
+                for (int x = 0; x < myVideoString.length; x += 4) { // This for loop is skip 4 videos
+    
+                    if (i == x) {
+                        System.out.println("\n" + myVideoString[x] + "\n");
+                    }
+    
+                }
+            }
+
+
+
+
+
 
     }
 
