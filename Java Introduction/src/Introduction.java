@@ -1,3 +1,4 @@
+
 /*
     Java Topics
 Basic Concepts
@@ -36,24 +37,24 @@ public class Introduction {
     static Scanner userInput = new Scanner(System.in);
 
     public static void main(String[] args) throws Exception {
-        //Basic Concepts
+        // Basic Concepts
         basicConcepts();
 
-        //Control Flow
+        // Control Flow
         controlFlow();
 
-        //Arrays
+        // Arrays
         Arrays();
 
         // Methods
         methods();
 
-        System.out.println("\n"+"Java Introduction End"+"\n");
+        System.out.println("\n" + "Java Introduction End" + "\n");
 
     }// main method
 
     static void methods() {
-        System.out.println("\n"+"Methods <^>"+"\n");
+        System.out.println("\n" + "Methods <^>" + "\n");
 
         /*
          * 20.Methods
@@ -72,7 +73,7 @@ public class Introduction {
         inchToFeet(126);
         feetToInch(10.5);
         double myRes = returnValue(50, 50, "Abu Hanif");
-        System.out.println(myRes+" is sum return");
+        System.out.println(myRes + " is sum return");
 
         int mInt = 20;
         if (checking(mInt) == true) {
@@ -87,7 +88,7 @@ public class Introduction {
     }
 
     static void Arrays() {
-        System.out.println("\n"+"Arrays <^>"+"\n");
+        System.out.println("\n" + "Arrays <^>" + "\n");
 
         /*
          * 16.Arrays
@@ -190,62 +191,56 @@ public class Introduction {
         if (seats[row][column] == 0) {
             System.out.println("Seat is Free");
         } else {
-            System.out.println("Seat is Sold"+"\n");
+            System.out.println("Seat is Sold" + "\n");
         }
 
+        // My Videos
+        String[] myVideoString = new String[10];
+        myVideoString[0] = "1 Video Title";
+        myVideoString[1] = "2 Video Title";
+        myVideoString[2] = "3 Video Title";
+        myVideoString[3] = "4 Video Title";
+        myVideoString[4] = "5 Video Title";
+        myVideoString[5] = "6 Video Title";
+        myVideoString[6] = "7 Video Title";
+        myVideoString[7] = "8 Video Title";
+        myVideoString[8] = "9 Video Title";
+        myVideoString[9] = "10 Video Title";
+        // Looping Over Array
+        for (int x = 0; x < myVideoString.length; x += 1) {
+            System.out.println(myVideoString[x]);
+        }
+        System.out.println(); // For Space
 
-            // My Videos
-            String[] myVideoString = new String[10];
-            myVideoString[0] = "1 Video Title";
-            myVideoString[1] = "2 Video Title";
-            myVideoString[2] = "3 Video Title";
-            myVideoString[3] = "4 Video Title";
-            myVideoString[4] = "5 Video Title";
-            myVideoString[5] = "6 Video Title";
-            myVideoString[6] = "7 Video Title";
-            myVideoString[7] = "8 Video Title";
-            myVideoString[8] = "9 Video Title";
-            myVideoString[9] = "10 Video Title";
-            // Looping Over Array
-            for (int x = 0; x < myVideoString.length; x += 1) {
-                System.out.println(myVideoString[x]);
-            }
-            System.out.println(); // For Space
-    
-            // Public Videos
-            String[] pVideoStrings = new String[10];
-            pVideoStrings[0] = "Monir Hosen";
-            pVideoStrings[1] = "Saiful Islam";
-            pVideoStrings[2] = "Kabir Hosen";
-            pVideoStrings[3] = "Dibol Hosen";
-            pVideoStrings[4] = "Amir Hosen";
-            pVideoStrings[5] = "kadir Hosen";
-            pVideoStrings[6] = "Anar Hosen";
-            pVideoStrings[7] = "jakir Hosen";
-            pVideoStrings[8] = "rakib Hosen";
-            pVideoStrings[9] = "Ali Hosen";
-    
-            for (int i = 0; i < pVideoStrings.length; i++) { // Fetch all videos
-                System.out.println(pVideoStrings[i]);
-    
-                for (int x = 0; x < myVideoString.length; x += 4) { // This for loop is skip 4 videos
-    
-                    if (i == x) {
-                        System.out.println("\n" + myVideoString[x] + "\n");
-                    }
-    
+        // Public Videos
+        String[] pVideoStrings = new String[10];
+        pVideoStrings[0] = "Monir Hosen";
+        pVideoStrings[1] = "Saiful Islam";
+        pVideoStrings[2] = "Kabir Hosen";
+        pVideoStrings[3] = "Dibol Hosen";
+        pVideoStrings[4] = "Amir Hosen";
+        pVideoStrings[5] = "kadir Hosen";
+        pVideoStrings[6] = "Anar Hosen";
+        pVideoStrings[7] = "jakir Hosen";
+        pVideoStrings[8] = "rakib Hosen";
+        pVideoStrings[9] = "Ali Hosen";
+
+        for (int i = 0; i < pVideoStrings.length; i++) { // Fetch all videos
+            System.out.println(pVideoStrings[i]);
+
+            for (int x = 0; x < myVideoString.length; x += 4) { // This for loop is skip 4 videos
+
+                if (i == x) {
+                    System.out.println("\n" + myVideoString[x] + "\n");
                 }
+
             }
-
-
-
-
-
+        }
 
     }
 
     static void basicConcepts() {
-        System.out.println("\n"+"Basic Concepts <^>"+"\n");
+        System.out.println("\n" + "Basic Concepts <^>" + "\n");
 
         /*
          * 1.Getting started with java
@@ -388,7 +383,7 @@ public class Introduction {
     }// basic concepts
 
     static void controlFlow() {
-        System.out.println("\n"+"Control Flow <^>"+"\n");
+        System.out.println("\n" + "Control Flow <^>" + "\n");
 
         // 9.Taking user input
         takingUserInout();
@@ -639,7 +634,7 @@ public class Introduction {
     private static void takingUserInout() {
         System.out.println("Type your name bellow : ");
         // Scanner userInput = new Scanner(System.in);
-        String userName = userInput.nextLine(); 
+        String userName = userInput.nextLine();
         System.out.println("Name " + userName);
 
         System.out.println("Type your age bellow : ");
@@ -647,13 +642,12 @@ public class Introduction {
         System.out.println("Points " + userPoint);
     }
 
-
     static void mParameter(String name, int age) { // Taking multiple parameter using comma,
         System.out.println("Name : " + name);
         System.out.println("Ages : " + age);
     }
 
-    // 21.Method parameters 
+    // 21.Method parameters
     static void calcu(double fdouble, int sint) {
         double res = fdouble * sint / 10;
         System.out.println("Calcu Res is = " + res);
@@ -669,7 +663,8 @@ public class Introduction {
         System.out.println(foot + " Foot = " + res + " Inch");
     }
 
-    /* 22.Returning from methods
+    /*
+     * 22.Returning from methods
      * The methods we have seen so far output their result.
      * In some cases we do not need to output the result,
      * but need to assign it to a variable, to work with it in our program.
@@ -683,7 +678,7 @@ public class Introduction {
     static double returnValue(double fd, int fint, String name) {
         double res = fd + fint;
         double extra = res * 0.20;
-        System.out.println("Business Reserve is : " + extra+"% of "+res);
+        System.out.println("Business Reserve is : " + extra + "% of " + res);
         System.out.println("My Name : " + name);
 
         return res;
@@ -701,9 +696,5 @@ public class Introduction {
     static double fahr(double c) {
         return c * 1.8 + 32;
     }
-
-
-
-
 
 }// class
