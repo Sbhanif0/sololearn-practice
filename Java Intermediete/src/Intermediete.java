@@ -63,7 +63,8 @@ public class Intermediete {
 
     private static void classesAndObjects() {
 
-        /* 24. Object-Oriented Programming
+        /*
+         * 24. Object-Oriented Programming
          * 
          * Java uses Object-Oriented Programming (OOP),
          * a programming style that is intended to make thinking about
@@ -102,7 +103,8 @@ public class Intermediete {
          * In other words, an object is an instance of a class.
          */
 
-        /* 25. Creating Classes and Objects
+        /*
+         * 25. Creating Classes and Objects
          * 
          * In order to create your own custom objects, you must first create the
          * corresponding classes.
@@ -114,7 +116,8 @@ public class Intermediete {
         CreatingClass.createClasses();
         CreatingClass.num = 90;
 
-        /* 26. Class Attributes
+        /*
+         * 26. Class Attributes
          * 
          * Defining Attributes
          * A class has attributes and methods.
@@ -133,7 +136,8 @@ public class Intermediete {
 
         System.out.println(m + " m = testClass.num = 80");
 
-        /* 27. Access Modifires
+        /*
+         * 27. Access Modifires
          * 
          * public is an access modifier, meaning that it is used to set the level of
          * access.
@@ -159,7 +163,8 @@ public class Intermediete {
          * public, private, protected, default.
          */
 
-        /* 27. Getters and Setters
+        /*
+         * 27. Getters and Setters
          * 
          * Getters and Setters are used to effectively protect your data,
          * particularly when creating classes.
@@ -178,8 +183,9 @@ public class Intermediete {
         testClass.setHanif("Sb Hanif Khan");
         System.out.println(testClass.gethanif());
 
-        /* 28. Constructors
-
+        /*
+         * 28. Constructors
+         * 
          * In Java, a constructor is a block of codes similar to the method.
          * It is called when an instance of the class is created.
          * At the time of calling constructor, memory for the object is allocated in the
@@ -209,8 +215,9 @@ public class Intermediete {
         parameterizedConstrctor paraConstrctor = new parameterizedConstrctor(40, "Hanif", 23.3);
         paraConstrctor.Display();
 
-        /* 29. Value and Reference Type
-
+        /*
+         * 29. Value and Reference Type
+         * 
          * Value Types
          * Value types are the basic types, and include byte, short, int, long, float,
          * double, boolean, and char.
@@ -222,8 +229,9 @@ public class Intermediete {
          * Arrays and Strings are also reference data types.
          */
 
-        /* 30. The Math Class
-
+        /*
+         * 30. The Math Class
+         * 
          * The JDK defines a number of useful classes, one of them being the Math class,
          * which provides predefined methods for mathematical operations.
          * 
@@ -258,29 +266,75 @@ public class Intermediete {
 
         /*
          * 31. Static Keyword
+         * Static Component can be call without creating objects
+         * Example : NameClass.studentName();
+         * Example : NameClass.firstName;
+         * 
+         * When you declare a variable or a method as static,
+         * it belongs to the class, rather than to a specific instance.
+         * This means that only one instance of a static member exists,
+         * even if you create multiple objects of the class,
+         * or if you don't create any. It will be shared by all objects.
          * 
          * 
          */
+        class Counter {
+            public static int COUNT = 10;
 
+            Counter() {
+                COUNT++;
+            }
+        }
+        /*
+         * The COUNT variable will be shared by all objects of that class.
+         * Now, we can create objects of our Counter class in main, and access the
+         * static variable.
+         */
+        Counter c1 = new Counter();
+        Counter c2 = new Counter();
+        System.out.println("Static Keyword => " + Counter.COUNT);
 
-
-
-
-
-
-
-
-
-
-
-
-
+        /*
+         * The output is 2, because the COUNT variable is static and gets incremented by
+         * one each time a new object of the Counter class is created. In the code
+         * above, we created 2 objects.
+         * You can also access the static variable using any object of that class, such
+         * as c1.COUNT.
+         * 
+         * It’s a common practice to use upper case when naming a static variable,
+         * although not mandatory.
+         */
 
         /*
          * 32. Final Keyword
+         * 
+         * Use the final keyword to mark a variable constant,
+         * so that it can be assigned only once.
+         * 
          */
+
+        class FinalTest {
+            public final static double score = 5.4;
+            public final int intNum = 45;
+        }
+        FinalTest num = new FinalTest();
+        int nam = num.intNum;
+        // final field cannot be assigned and final keyword makes a variable constant
+        // num.intNum = 50;
+        System.out.println(FinalTest.score + " " + num.intNum + " or " + nam);
+
         /*
          * 33. Packages
+         * 
+         * Packages are used to avoid name conflicts and to control access to classes.
+         * A package can be defined as a group made up of similar types of classes,
+         * along with sub-packages.
+         * Creating a package in Java is quite easy. Simply right click on your src
+         * directory and click New->Package. Give your package a name and click Finish.
+         * You will notice that the new package appears in the project directory. Now
+         * you can move and create classes inside that package.
+         * 
+         * Package is importable
          */
 
         /*
@@ -289,13 +343,8 @@ public class Intermediete {
 
     }
 
-    private static void moreOnClasses() {
-    }
 
-    private static void exceptionsListsThreadsFiles() {
-    }
-
-    // Classes and Objects
+    // Used on Classes and Objects
     public static class CreatingClass {
 
         int id;
@@ -335,7 +384,7 @@ public class Intermediete {
 
     }
 
-    // Classes and Objects
+    // Used on Classes and Objects
     public static class parameterizedConstrctor {
 
         int id;
@@ -361,7 +410,59 @@ public class Intermediete {
             System.out.println("Id (" + id + ") Name (" + name + ") Score (" + score);
         }
     }
+
+   
+    private static void moreOnClasses() {
+        /* 35. Encapsulation
+         * 
+         * 
+        */
+
+
+
+
+
+        /* 36. Inheritance*/
+        /* 37. Polymorphism*/
+        /* 38. Overriding and Overloading*/
+        /* 39. Abstruct Classes*/
+        /* 40. Interface*/
+        /* 41. Casting*/
+        /* 42. Downcasting*/
+        /* 43. Anonymouse Classes*/
+        /* 44. Inner Classes*/
+        /* 45. The Equals() Method */
+        /* 46. Enums*/
+        /* 47. Using the Java Api*/
+        /* 48. Java 2 Module 2 Quiz*/
+        
+
+
+    }
+
+    private static void exceptionsListsThreadsFiles() {
+
+        /* 49. Exception Handling
+         * 
+         * 
+         * 
+         * 
+        */
+        /* 50. Multiple Exceptions*/
+        /* 51. Theads*/
+        /* 52. Runtime vs Checked Exceptions*/
+        /* 53. ArrayList*/
+        /* 54. LinkedList*/
+        /* 55. Hashmap*/
+        /* 56. Sets*/
+        /* 57. Sorting Lists*/
+        /* 58. Iterators*/
+        /* 59. Working with Files*/
+        /* 60. Reading a Files*/
+        /* 61. Creating and Writing Files*/    
+    // 62. Java 2 Module 3 Quiz
+    }
+
 }
 
 
-//// test
