@@ -343,7 +343,6 @@ public class Intermediete {
 
     }
 
-
     // Used on Classes and Objects
     public static class CreatingClass {
 
@@ -411,61 +410,150 @@ public class Intermediete {
         }
     }
 
-   /*            End of classes and objects            */
+    /* End of classes and objects */
 
-   
-   /*            Start of opps             */
+    /* Start of opps */
     private static void moreOnClasses() {
-        /* 35. Encapsulation
+        /*
+         * 35. Encapsulation
+         * 
+         * The idea behind encapsulation is to ensure that implementation details are
+         * not visible to users. The variables of one class will be hidden from the
+         * other classes, accessible only through the methods of the current class. This
+         * is called data hiding.
+         * To achieve encapsulation in Java, declare the class' variables as private and
+         * provide public setter and getter methods to modify and view the variables'
+         * values.
+         * 
+         */
+        class EncapsulationTest {
+            private static int age = 0;
+
+            public static void getValue(int boyosh) {
+                age = boyosh;
+                System.out.println("Encapsulation Test Value => " + age);
+            }
+        }
+        EncapsulationTest.getValue(50);
+
+        /*
+         * 36. Inheritance
+         * 
+         * When one class is inherited from another class,
+         * it inherits all of the superclass' non-private variables and methods.
          * 
          * 
-        */
+         */
 
+        class A {
+            protected int grow;
+            protected String head;
+            int point;
+            String desc = "this is from class A by extending from class B";
 
+            protected void desc() {
+                System.out.println(desc);
+            }
 
+            protected void ground(String ground) {
+                System.out.println(ground);
+            }
 
+            protected String myName(String name) {
+                return name;
+            }
+        }
+        class B extends A {
 
-        /* 36. Inheritance*/
-        /* 37. Polymorphism*/
-        /* 38. Overriding and Overloading*/
-        /* 39. Abstruct Classes*/
-        /* 40. Interface*/
-        /* 41. Casting*/
-        /* 42. Downcasting*/
-        /* 43. Anonymouse Classes*/
-        /* 44. Inner Classes*/
-        /* 45. The Equals() Method */
-        /* 46. Enums*/
-        /* 47. Using the Java Api*/
-        /* 48. Java 2 Module 2 Quiz*/
+            B() {
+                grow = 50;
+                head = "Inheritance checking : ";
+                ground("when create class B object grount method will call");
+            }
+
+        }
+        B b = new B();
+        System.out.println(b.head + (b.grow + 20));// use () for math operation
+        String name = b.myName("@sbhanif");
+        int point = b.point = 0;
+        System.out.println(name + point);
+        b.desc();// from class A
+        // private methods are not inherited by super class
+
+        /*
+         * 37. Polymorphism
+         * Polymorphism, which refers to the idea of "having many forms", occurs when
+         * there is a hierarchy of classes related to each other through inheritance.
+         * 
+         * A call to a member method will cause a different implementation to be
+         * executed, depending on the type of the object invoking the method.
+         * 
+         * 
+         * 
+         * 
+         * 
+         * 
+         */
+        class SuperClass{
+            public void sbKhan(){
+                System.out.println("superClass");
+            }
+        }
+        class subClass extends SuperClass{
+            public void sbKhan(){
+                System.out.println("subClass");
+            }
+        }
+        class subChild extends SuperClass{
+            public void sbKhan(){
+                System.out.println("subChild");
+            }
+        }
+        SuperClass superClass = new SuperClass();
+        SuperClass subClass =  new subClass();
+        SuperClass subChild = new subChild();
+        superClass.sbKhan();
+        subClass.sbKhan();
+        subChild.sbKhan();
+
+    
         
-
+        /* 38. Overriding and Overloading */
+        /* 39. Abstruct Classes */
+        /* 40. Interface */
+        /* 41. Casting */
+        /* 42. Downcasting */
+        /* 43. Anonymouse Classes */
+        /* 44. Inner Classes */
+        /* 45. The Equals() Method */
+        /* 46. Enums */
+        /* 47. Using the Java Api */
+        /* 48. Java 2 Module 2 Quiz */
 
     }
 
     private static void exceptionsListsThreadsFiles() {
 
-        /* 49. Exception Handling
+        /*
+         * 49. Exception Handling
          * 
          * 
          * 
          * 
-        */
-        /* 50. Multiple Exceptions*/
-        /* 51. Theads*/
-        /* 52. Runtime vs Checked Exceptions*/
-        /* 53. ArrayList*/
-        /* 54. LinkedList*/
-        /* 55. Hashmap*/
-        /* 56. Sets*/
-        /* 57. Sorting Lists*/
-        /* 58. Iterators*/
-        /* 59. Working with Files*/
-        /* 60. Reading a Files*/
-        /* 61. Creating and Writing Files*/    
-    // 62. Java 2 Module 3 Quiz
+         */
+        /* 50. Multiple Exceptions */
+        /* 51. Theads */
+        /* 52. Runtime vs Checked Exceptions */
+        /* 53. ArrayList */
+        /* 54. LinkedList */
+        /* 55. Hashmap */
+        /* 56. Sets */
+        /* 57. Sorting Lists */
+        /* 58. Iterators */
+        /* 59. Working with Files */
+        /* 60. Reading a Files */
+        /* 61. Creating and Writing Files */
+        // 62. Java 2 Module 3 Quiz
     }
 
 }
-
-
